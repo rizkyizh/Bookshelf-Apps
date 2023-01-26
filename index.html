@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bookshelf</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container text-center header-wrapper">
+        <h1 class="header-title">BOOKSHELF</h1>
+      </div>
+    </header>
+    <main>
+      <div class="container contains-wrapper">
+        <div class="left-contains-wrapper">
+          <div class="field">
+            <h2 class="text-center">Masukkan Buku Baru</h2>
+            <form class="form" action="#" id="form">
+              <label for="judul">Judul</label>
+              <input type="text" name="judul" id="judul" required />
+              <label for="penulis">Penulis</label>
+              <input type="text" name="penulis" id="penulis" required />
+              <label for="tahun">Tahun</label>
+              <input type="number" name="tahun" id="tahun" required />
+              <label for="selesaibaca" class="selesai">Selesai Baca</label>
+              <input type="checkbox" name="selesaibaca" id="selesaibaca" />
+              <input
+                type="submit"
+                value="Masukkan buku ke rak"
+                name="Submit"
+                class="btn-submit"
+              />
+            </form>
+          </div>
+          <div class="pesanDialog">
+            <p class="pesan" hidden>Buku baru berhasil ditambahkan</p>
+          </div>
+        </div>
+        <div class="right-contains-wrapper field">
+          <form id="search-wrapper" class="field">
+            <label class="label-search" for="caribuku">cari judul buku</label>
+            <input type="text" name="caribuku" id="caribuku" />
+            <input id="searchSubmit" type="submit" value="cari" />
+          </form>
+          <div class="bookshelf-wrapper">
+            <div class="bookshelf-group">
+              <h3>Belum selesai dibaca</h3>
+              <div class="list-books" id="books"></div>
+            </div>
+            <div class="bookshelf-group">
+              <h3>Selesai dibaca</h3>
+              <div class="list-books" id="completed-books"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="footer-wm text-center">
+        &copy; Kopi Kanan 2023 | Built with <span> ♥ </span> by
+        <a href="https://github.com/moe-ka">moeka</a>
+      </p>
+    </footer>
+
+    <div class="edit-wrapper" hidden>
+      <div class="form-wrapper">
+        <form class="edit-form" action="#" id="edit-form">
+          <label for="judul">Judul</label>
+          <input type="text" name="judul" id="edit-judul" required />
+          <label for="penulis">Penulis</label>
+          <input type="text" name="penulis" id="edit-penulis" required />
+          <label for="tahun">Tahun</label>
+          <input type="number" name="tahun" id="edit-tahun" required />
+          <label for="selesaibaca" class="selesai">Selesai Baca</label>
+          <input type="checkbox" name="selesaibaca" id="edit-selesaibaca" />
+          <input type="button" value="Cancel" class="btn-cancel" />
+          <input
+            type="submit"
+            value="Terapkan"
+            name="Submit"
+            class="btn-submit-edit"
+          />
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/funct.js"></script>
+  </body>
+</html>
